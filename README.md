@@ -2,7 +2,7 @@ Exercício proposto na aula de javascript da Alpha EdTech com o tema de *"Manipu
 
 Descrição do exercício:
 
-Faça uma página web com dois <input type="text">.
+Faça uma página web com dois input type="text".
 
 Vamos fazer com que eles sejam “gêmeos”, ou seja, tudo que acontece em um reflete automaticamente no outro:
 
