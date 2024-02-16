@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5 JS - Questão 5</title>
+    <style>
+        input:hover, input:focus {
+            background-color: lightblue;
+            border: 2px solid darkblue;
+            outline:none;
+        }
+    </style>
+</head>
+<body>
+    <label for="input1">Input 1</label>
+    <input type="text" name="" id="input1">
+    
+    <label for="input2">Input 2</label>
+    <input type="text" name="" id="input2">
+
+    <script>
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+
+        // Adicionei eventos para hover e foco/desfoco para input1
+        input1.addEventListener("mouseenter", addHoverEffect);
+        input1.addEventListener("mouseleave", removeHoverEffect);
+        input1.addEventListener("focus", addFocusEffect);
+        input1.addEventListener("blur", removeFocusEffect);
+        input1.addEventListener("keyup", copyText1); 
+
+        // Adicionei eventos para hover e foco/desfoco para input2
+        input2.addEventListener("mouseenter", addHoverEffect);
+        input2.addEventListener("mouseleave", removeHoverEffect);
+        input2.addEventListener("focus", addFocusEffect);
+        input2.addEventListener("blur", removeFocusEffect);
+        input2.addEventListener("keyup", copyText2); 
+
+        function copyText1(){
+            input2.value = input1.value;
+        }
+
+        function copyText2(){
+            input1.value = input2.value;
+        }
+
+        function addHoverEffect() {
+            input1.style.backgroundColor = "lightblue";
+            input2.style.backgroundColor = "lightblue";
+        }
+
+        function removeHoverEffect() {
+            input1.style.backgroundColor = "";
+            input2.style.backgroundColor = "";
+        }
+
+        function addFocusEffect() {
+            input1.style.border = "2px solid darkblue";
+            input2.style.border = "2px solid darkblue";
+        }
+
+        function removeFocusEffect() {
+            input1.style.border = "";
+            input2.style.border = "";
+        }
+
+    </script>
+</body>
+</html>
